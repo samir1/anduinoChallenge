@@ -21,7 +21,6 @@ Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO
 
 /****************************** Feeds ***************************************/
 
-// Setup feeds for temperature & humidity
 Adafruit_MQTT_Publish message = Adafruit_MQTT_Publish(&mqtt,  AIO_USERNAME "/feeds/feedName");
 
 /*************************** Sketch Code ************************************/
