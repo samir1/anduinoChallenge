@@ -26,7 +26,7 @@ You'll be using the Arduino Due to host the AnduinoWiFi shield and to run the co
 
 # When you're ready...
 
-Once you've tested and you think you have all the code necessary to complete the task, submit a pull request to this repo and be sure to fill in the howTo.md with a brief write up explaining the moving parts of the project and higlighting some cool features!
+Once you've tested and you think you have all the code necessary to complete the task, submit a pull request to this repo and be sure to fill in the [howTo.md](https://github.com/briancarbs/anduinoChallenge/blob/master/howTo.md) with a brief write up explaining the moving parts of the project and higlighting some cool features!
 
 # Bonus Points
 
