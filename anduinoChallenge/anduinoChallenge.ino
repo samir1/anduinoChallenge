@@ -5,13 +5,19 @@
 
 // WiFi parameters
 #define WLAN_SSID       "AndiumNetwork"
-#define WLAN_PASS       ""
+#define WLAN_PASS       "co2nodes"
 
 // Adafruit IO
 #define AIO_SERVER      "io.adafruit.com"
 #define AIO_SERVERPORT  1883
-#define AIO_USERNAME    ""
-#define AIO_KEY         ""
+#define AIO_USERNAME    "samir5421"
+#define AIO_KEY         "6ac6657ff6ea4c8a89334e3cc8c652fb"
+
+// pin numbers
+const int buttonPin = 1;     // the number of the pushbutton pin
+const int ledPin =  LED_BUILTIN;      // the number of the LED pin
+
+int buttonState = 0;         // variable for reading the pushbutton status
 
 // Functions
 void connect();
@@ -21,7 +27,7 @@ Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO
 
 /****************************** Feeds ***************************************/
 
-Adafruit_MQTT_Publish message = Adafruit_MQTT_Publish(&mqtt,  AIO_USERNAME "/feeds/feedName");
+Adafruit_MQTT_Publish message = Adafruit_MQTT_Publish(&mqtt,  AIO_USERNAME "/feeds/Andium");
 
 /*************************** Sketch Code ************************************/
 
@@ -53,20 +59,26 @@ void setup() {
 
 void loop() 
 {
+
+  buttonState = digitalRead(buttonPin);
+
+  if(! mqtt.ping(3)) {
+   // reconnect to adafruit io
+   if(! mqtt.connected()) {
+     connect();
+   }
+  }
+
+  if (buttonState == HIGH) {
+    digitalWrite(ledPin, HIGH);
+    Serial.println("sending msg");
+    message.publish("This msg is sent to adafruit.io");
+    delay(3000); // wait 3 seconds
+  } else {
+    digitalWrite(ledPin, LOW);
+  }
  
- 
-     if(! mqtt.ping(3))
-     { 
-    // reconnect to adafruit io
-    if(! mqtt.connected())
-      connect();
-     }
-     
-      Serial.println("sending msg");
-      message.publish("This msg is sent to adafruit.io");
-  
-      delay(30000); //wait 30seconds
-  
+
 }
 
 
