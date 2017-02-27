@@ -6,12 +6,12 @@ To participate in this challenge, fork this repo, code, assemble, integrate, and
 
 # Your Toolbox
 
-[Arduino Due](https://www.arduino.cc/en/Main/arduinoBoardDue)
-[Aduino IDE](https://www.arduino.cc/en/main/software)
-[AnduinoWiFi](https://github.com/andium/Anduino)
-[Adafruit.io](https://io.adafruit.com/)
-[GitHub](http://rogerdudler.github.io/git-guide/)
-[IFTTT](https://ifttt.com/)
+* [Arduino Due](https://www.arduino.cc/en/Main/arduinoBoardDue)
+* [Aduino IDE](https://www.arduino.cc/en/main/software)
+* [AnduinoWiFi](https://github.com/andium/Anduino)
+* [Adafruit.io](https://io.adafruit.com/)
+* [GitHub](http://rogerdudler.github.io/git-guide/)
+* [IFTTT](https://ifttt.com/)
 
 Other hardware provided to you...
 * Breadboard
