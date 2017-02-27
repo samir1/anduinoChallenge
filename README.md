@@ -30,8 +30,8 @@ Once you've tested and you think you have all the code necessary to complete the
 
 # Bonus Points
 
-Display the message being sent on AnduinoWiFi LCD Display.
-Initiate a message to be displayed on the LCD from the cloud.
+* Display the message being sent on AnduinoWiFi LCD Display.
+* Initiate a message to be displayed on the LCD from the cloud.
 
 # Feeling adventurous?
 Complete the same task without utilizng IFTTT or Adafruit.IO
